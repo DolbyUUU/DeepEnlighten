@@ -1,0 +1,37 @@
+## Language Distribution in `model_think`
+
+| Category               | Count | Percentage |
+|------------------------|-------|------------|
+| Only English           | 88006 | 100.00% |
+| Only Chinese           | 0 | 0.00% |
+| Mixed (English & Chinese) | 2 | 0.00% |
+
+## Language Distribution in `model_answer`
+
+| Category               | Count | Percentage |
+|------------------------|-------|------------|
+| Only English           | 87814 | 99.78% |
+| Only Chinese           | 0 | 0.00% |
+| Mixed (English & Chinese) | 0 | 0.00% |
+
+## Mixed Texts in `model_think`
+
+| Index | Text |
+|-------|------|
+| 44787 | To determine what Tracy needed to do before heading towards Austin to see a rodeo in Texas while going to Texas to see a rodeo.",
+<reasoning> To reach Austin, Tracy would need to travel from her current location to Texas and then from Texas to Austin. This typically involves flights,租车, or other modes of transportation.",
+<answer> (B) Book a hotel in Austin</answer><|endoftext|>
+--------------------------------------------------------------------------------
+[Ground Truth] Correct Label: B
+Options: {'A': 'follow through', 'B': 'book a hotel in Austin', 'C': 'see the sites of Austin'}
+[Error] Missing <think> reasoning tags
+[Error] Failed to extract model answer
+
+[Structure Validation]
+  <think>: count=1, position=0 |
+| 71876 | To determine what actions Taylor would want to take immediately after running straight for home plate if she was close to winning the game without any specific information about typical赛后庆祝行为或后续动作。 |
+
+## Mixed Texts in `model_answer`
+
+| Index | Text |
+|-------|------|
