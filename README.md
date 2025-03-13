@@ -19,13 +19,16 @@ It leverages the following key components:
 - Example:  
   - Q: "Jordan wanted to tell Tracy a secret, so Jordan leaned towards Tracy. Why did Jordan do this?"  
   - A: "To make sure no one else could hear."
+- Dataset preprocessing is implemented in `DeepEnlighten/verl/utils/reward_score/socialiqa.py`.
 
 ---
 
 ## Rule-Based Rewards
-1. **Format Reward**: +2 if valid, -2 if invalid.  
-2. **Answer Reward**: +2 if correct, -2 if incorrect, -3 if invalid.  
-3. Language Consistency Reward or Others: not applied. 
+- Reward modelling is implemented in `DeepEnlighten/verl/utils/reward_score/socialiqa.py`.
+- Rules:
+  - **Format Reward**: +2 if valid, -2 if invalid.  
+  - **Answer Reward**: +2 if correct, -2 if incorrect, -3 if invalid.  
+  - Language Consistency Reward or Others: not applied. 
 
 ---
 
