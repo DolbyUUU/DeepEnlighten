@@ -39,16 +39,17 @@ bash run_rl_trainer_xxx.sh
 
 ## Key Findings
 
-For more visualized details, refer to my WandB report:  
-**[DeepEnlighten Training Report](https://api.wandb.ai/links/yuwang91-hk/eyclicwc)**
+For details, refer to:
 
-Note: The findings may be specific to the experiment setups.
+- **[DeepEnlighten Training Report](https://api.wandb.ai/links/yuwang91-hk/eyclicwc)**  
+- **`analysis` Directory**: Contains log analysis of CoT, language mixing, and "aha moment".  
+- **`evaluation` Directory**: Contains evaluation results on math benchmarks.
 
 ---
 
 ### 1. **Generalization from EQ to IQ**
 
-Models post-trained on social reasoning tasks can **generalize to out-of-distribution (OOD) tasks** requiring mathematical reasoning.
+- Social reasoning can **generalize to out-of-distribution (OOD) tasks** requiring mathematical reasoning.
 
 #### Table: Accuracy in Mathematical Reasoning CoT Tests 
 *(Base Model = Llama3.2-3B-Instruct, 1000 Steps RL, Number of Samples in Parenthesis)*
@@ -66,6 +67,7 @@ Models post-trained on social reasoning tasks can **generalize to out-of-distrib
 - Longer CoT likely emerges **only when the task is challenging**, as the model may resort to memorization rather than true reasoning.
 - Further experiments are required to validate this observation.  
 
+---
 
 ### 3. **Longer CoT ≠ Higher EQ**
 - While CoT becomes longer and the mean rewards increase, longer CoT does not correlate with higher accuracy.
