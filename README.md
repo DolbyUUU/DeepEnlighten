@@ -19,7 +19,8 @@ It leverages the following key components:
 - Example:  
   - Q: "Jordan wanted to tell Tracy a secret, so Jordan leaned towards Tracy. Why did Jordan do this?"  
   - A: "To make sure no one else could hear."
-- Dataset preprocessing is implemented in `DeepEnlighten/verl/utils/reward_score/socialiqa.py`.
+- Dataset preprocessing is implemented in `DeepEnlighten/examples/data_preprocess/social_iqa.py`.
+- Raw and processed datasets can be found in `DeepEnlighten/data`. Note that Llama3.2-Instruct and Qwen2.5-Instruct use different instruction tuning templates, so separate datasets are required for each.
 
 ---
 
@@ -45,8 +46,8 @@ bash run_rl_trainer_xxx.sh
 For details, refer to:
 
 - **[DeepEnlighten Training Report](https://api.wandb.ai/links/yuwang91-hk/eyclicwc)**  
-- **`analysis` Directory**: Contains log analysis of CoT, language mixing, and "aha moment".  
-- **`evaluation` Directory**: Contains evaluation results on math benchmarks.
+- **`analysis` directory**: Contains log analysis of CoT, language mixing, and "aha moment".  
+- **`evaluation` directory**: Contains evaluation results on math benchmarks.
 
 ---
 
@@ -65,10 +66,11 @@ For details, refer to:
 
 ---
 
-### 2. **Longer CoT is Not Always Present**
+### 2. **Longer CoT and Overthinking Phenomenon**
 - **Longer CoT** does not consistently appear across different experiments.
 - Longer CoT likely emerges **only when the task is challenging**, as the model may resort to memorization rather than true reasoning.
-- Further experiments are required to validate this observation.  
+- Llama-Instruct as a base model tends to over-think in social reasoning, while [this paper](https://arxiv.org/abs/2412.21187) suggests that Llama-Instruct is the least likely to over-think in math reasoning.
+- Further experiments are required to validate these observations.  
 
 ---
 
